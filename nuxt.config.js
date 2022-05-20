@@ -1,4 +1,4 @@
-const OpenBrowserPlugin = reuire('open-browser-plugin');
+const OpenBrowserPlugin = require('open-browser-plugin');
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
