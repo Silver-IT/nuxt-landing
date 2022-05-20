@@ -25,9 +25,11 @@
     </svg>
     <div class="flex items-end">
       <p class="text-9xl mr-5">2.</p>
-      <p class="flex-auto">Erhalte Vermittlungsangebot von Arbeitgeber</p>
+      <p class="flex-auto mb-3">{{labels[selection]}}</p>
     </div>
-    <img src="/undraw_job_offers_kw5d.svg" class="float-right mr-5" />
+    <div class="flex justify-center">
+      <img :src="images[selection]" class="float-right mr-5" />
+    </div>
     <svg
       class="wavy-bottom"
       viewBox="0 0 500 250"
@@ -40,6 +42,32 @@
     </svg>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'LandingInvitation',
+  props: {
+    selection: {
+      type: Number,
+      default: 0
+    }
+  },
+  data () {
+    return {
+      labels: [
+        'Erstellen dein Lebenslauf',
+        'Erstellen ein Jobinserat',
+        'Erhalte Vermittlungsangebot von Arbeitgeber'
+      ],
+      images: [
+        '/undraw_task_31wc.svg',
+        '/undraw_about_me_wa29.svg',
+        '/undraw_job_offers_kw5d.svg'
+      ]
+    }
+  }
+}
+</script>
 
 <style scoped>
 svg.wavy-top {

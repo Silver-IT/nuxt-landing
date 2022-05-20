@@ -1,7 +1,8 @@
 <template>
   <div>
+    <Header />
     <LandingAgreement />
-    <section>
+    <section class="mt-5">
       <VueSlickCarousel
         :centerMode="true"
         :centerPadding="'100px'"
@@ -36,10 +37,11 @@
         </div>
       </VueSlickCarousel>
     </section>
-    <LandingGuide />
-    <LandingMakeProfile />
-    <LandingInvitation />
-    <LandingPayment />
+    <LandingGuide :selection="selection" />
+    <LandingMakeProfile :selection="selection" />
+    <LandingInvitation :selection="selection" />
+    <LandingPayment :selection="selection" />
+    <Footer />
   </div>
 </template>
 
@@ -71,15 +73,12 @@ export default {
   },
   methods: {
     onClickEmployee() {
-      console.log("Clicked Employee");
       this.selection = 0;
     },
     onClickEmployer() {
-      console.log("Clicked Employer");
       this.selection = 1;
     },
     onClickContractor() {
-      console.log("Clicked Contractor");
       this.selection = 2;
     },
   },

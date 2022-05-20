@@ -1,24 +1,19 @@
 <template>
-  <section class="agreement-wrapper">
-    <Header />
+  <section class="agreement-wrapper pt-16 pb-20">
     <p class="text-center text-5xl py-5 bg-transparent">Deine Job website</p>
     <div
       class="agreement-image flex justify-center h-96 bg-no-repeat bg-center"
     ></div>
-    <div class="register-wrapper bg-white rounded-t-xl p-6 mb-12">
-      <div
-        class="
-          btn-register
-          p-3
-          text-center
-          rounded-xl
-          text-white
-          cursor-pointer
-        "
-      >
-        Kostenlos Registrieren
-      </div>
-    </div>
+    <svg
+      class="wavy-bottom"
+      viewBox="0 0 500 250"
+      preserveAspectRatio="xMinYMin meet"
+    >
+      <path
+        d="M0,200 C150,220 420,80 500,100 L500,250 L0,250 Z"
+        style="stroke: none; fill: white"
+      ></path>
+    </svg>
   </section>
 </template>
 
@@ -36,15 +31,15 @@ section.agreement-wrapper p {
   color: #2D3748;
 }
 
+svg.wavy-bottom {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .agreement-image {
   background-image: url("/undraw_agreement_aajr.svg");
-}
-
-.register-wrapper {
-  box-shadow: 0px -1px 3px #00000033;
-}
-
-.btn-register {
-  background: transparent linear-gradient(95deg, #319795 0%, #3182CE 100%) 0% 0% no-repeat padding-box;
+  background-size: cover;
 }
 </style>

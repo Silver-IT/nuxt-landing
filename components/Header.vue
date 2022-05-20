@@ -1,5 +1,5 @@
 <template>
-  <div class="tomisha-header rounded-b-xl h-16 bg-white">
+  <div class="tomisha-header z-10 fixed top-0 left-0 right-0 rounded-b-xl h-16 bg-white">
     <div class="tomisha-header-bar h-1.5"></div>
     <div class="tomisha-header-content flex justify-end p-5">
         <span class="cursor-pointer hover:underline">Login</span>
